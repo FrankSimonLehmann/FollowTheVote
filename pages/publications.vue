@@ -1,7 +1,7 @@
 <template>
   <body>
   <section class="bg-white dark:bg-gray-900">
-    <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28 bg-gray-900">
+    <div class="grid max-w-screen-xl px-4 pt-8 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-8 bg-gray-900">
       <div class="rounded-lg lg:col-span-12 relative bg-cover bg-center h-[calc(100vh/2)] bg-[url('public/writing.jpg')] ">
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start">
           <div class="ml-5 text-left">
@@ -14,7 +14,7 @@
   </section>
 
   <section class="bg-white dark:bg-gray-900">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6">
+    <div class="max-w-screen-xl px-4 mx-auto lg:px-6">
       <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
         <div class="col-span-3 space-y-5 border-t border-gray-200 dark:border-gray-700 "></div>
         <Categories/>
