@@ -39,11 +39,11 @@ h3 {
 }
 
 p {
-  @apply font-light lg:mb-8 md:text-lg lg:text-xl text-color-secondary;
+  @apply font-light md:text-lg lg:text-xl text-color-secondary;
 }
 
 .main-grid {
-  @apply grid max-w-screen-xl px-4 pt-8 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-8
+  @apply grid max-w-screen-xl px-4 pt-8 pb-8 mx-auto lg:gap-8 xl:gap-10 lg:py-16 lg:grid-cols-12 lg:pt-8
 }
 
 .btn {

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col max-w-lg mx-auto text-center text-gray-900  dark:text-white text-left">
+  <div class="flex flex-col max-w-lg mx-auto text-gray-900  dark:text-white text-left">
     <h3 class="text-2xl font-semibold text-left">Jung. Schlau. Mitglied des Bundestags</h3>
     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 text-balance text-left my-4">Unter diesem Motto starten wir mit FollowTheVote in ein neues Format. Wir finden für euch raus, wie die jungen Politiker:innen so ticken. Uns geht es darum, den Mensch hinter der/dem Politiker:in zu zeigen und herauszufinden, ob und wie junge Politiker:innen aller demokratischer Parteien die Interessen der Generation Y und Z vertreten.</p>
     <a href="#" class="btn-soft">All articles (20)

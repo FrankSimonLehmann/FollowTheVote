@@ -8,7 +8,7 @@
                 <a href="#" class="btn bg-slate-300">See projects</a>
             </div>
             <div class="py-5 lg:mt-0 lg:col-span-5 lg:flex">
-                <img data-aos="zoom-in" data-aos-duration="3000" src="../public/General.png" alt="hero image">
+                <img src="../public/General.png" alt="hero image">
             </div>
         </div>
     </section>
