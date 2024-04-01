@@ -1,0 +1,9 @@
+schema: local.graphql
+projects:
+  strapi:
+    schema:
+      - http://localhost:1337/graphql:
+#          headers:
+#            Authorization: Basic cDdrMm1tY204eGg4ZDY2dzo1YmNiZmVkMGYyMjYxZWExZmU4MzlkNzY0OTQ1OWQyNwo=
+documents:
+  - ./**
