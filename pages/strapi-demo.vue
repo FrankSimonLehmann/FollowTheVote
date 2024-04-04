@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { onMounted, ref, computed } from 'vue';
+
 const QUERY = `query {
   articles {
     meta {
@@ -9,8 +11,8 @@ const QUERY = `query {
     data {
       id
       attributes {
-        Intro
-        Image {
+        Title
+        Cover {
           data {
             id
             attributes {
@@ -24,28 +26,45 @@ const QUERY = `query {
       }
     }
   }
-}`
+}`;
 
-const response = await fetch('http://localhost:1337/graphql', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer 8ab10f74db71cc2a3a53d5c433b56eebd42cce76020a08e76a0614f54363e60968d927a562569f0fb979c03c19a8747ff345161b63bcbcbe8715e152bbc7f9de325a561b5640244fb984d14cf49df05d194c95b1e2873df54b87e829d143cec8afc934fc4bfd46dc94d7d537017ef6afd708fb8fddc23dc92a0b2fe1c6deb0fc`
-  },
-  body: JSON.stringify({
-    query: QUERY,
-    variables: {}
-  })
-})
+const data = ref({}); // Make 'data' a reactive reference
 
-const data = await response.json()
+async function fetchData() {
+  const response = await fetch('http://localhost:1337/graphql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer d3b730221110fa33635326a0c7b3436ef63754f4356db9517c8fdbdf58632505910d2103802dcdb810813b26b444f29df73ecd986ffc89f469aba099bed1bb7903d4efacb321922fd22e5b4ce33de3819a4c544499c2e7824e01fb551a3d9ea0d44181c0602ec215f262b221b22bbdf7286d79e0e403626e0abd36ef58e9ff4f` // Use your actual token
+    },
+    body: JSON.stringify({
+      query: QUERY,
+      variables: {}
+    })
+  });
 
+  data.value = await response.json();
+}
 
-console.log(data)
+onMounted(() => {
+  fetchData();
+});
+
+const articles = computed(() => data.value.data?.articles?.data || []);
+
+console.log(articles)
+
 </script>
 
 <template>
+
   <div class="bg-slate-400 p-12">
+
     <h1>Strapi</h1>
+    <div class="grid grid-cols-3 gap-5">
+      <div v-for="article in articles" class="bg-red-400 p-12">
+        {{article.attributes.Title}}
+      </div>
+    </div>
   </div>
 </template>

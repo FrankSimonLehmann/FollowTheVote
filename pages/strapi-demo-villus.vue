@@ -14,8 +14,17 @@ const { data } = await useQuery({
     data {
       id
       attributes {
-        Intro
-        Content
+        Title
+        Body {
+          type
+          children {
+            type
+            text
+            code
+            bold
+            italic
+          }
+        }
       }
     }
   }
@@ -32,9 +41,9 @@ const articles = computed(() => data.value?.articles?.data || [])
 
     <div class="grid grid-cols-3 gap-5">
       <div v-for="article in articles" class="bg-red-400 p-12">
-        {{article.attributes.Intro}}
+        {{article.attributes.title}}
 
-        <template v-for="row in article.attributes.Content">
+        <template v-for="row in article.attributes.body">
           <StrapiParagraph v-if="row.type === 'paragraph'" :value="row" />
         </template>
       </div>
