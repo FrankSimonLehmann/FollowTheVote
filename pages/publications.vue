@@ -73,9 +73,6 @@ onMounted(() => {
 });
 
 const categories = computed(() => data.value.data?.categories?.data || []);
-console.log(categories)
-console.log(data)
-
 </script>
 
 <template>
@@ -96,8 +93,8 @@ console.log(data)
   <section class="bg-white dark:bg-gray-900">
     <div class="max-w-screen-xl px-4 mx-auto lg:px-6">
       <div v-for="category in categories" :key="category.id">
-        <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-          <div class="col-span-3 space-y-5 border-t border-gray-200 dark:border-gray-700 "></div>
+        <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-8">
+          <div class="col-span-3 space-y-10 border-t border-gray-200 dark:border-gray-700 "></div>
           <Categories
             :title="category.attributes.Title"
             :description="category.attributes.Description"

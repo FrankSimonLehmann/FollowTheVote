@@ -2,15 +2,22 @@
 import { onMounted, ref, computed } from 'vue';
 import ArticleTemplate from '../components/ArticleTemplate.vue';
 
-
   const QUERY = `query {
     articles {
       data {
+        id
       attributes {
         Cover {
           data {
             attributes {
               url
+            }
+          }
+        }
+        categories {
+          data {
+            attributes {
+              Title
             }
           }
         }
@@ -20,6 +27,7 @@ import ArticleTemplate from '../components/ArticleTemplate.vue';
         PublishingDate
         KeyPoints
         Body
+        Video_url
         Sources
         members {
           data {
@@ -73,27 +81,26 @@ import ArticleTemplate from '../components/ArticleTemplate.vue';
   });
 
   const articles = computed(() => data.value.data?.articles?.data || []);
-  console.log(articles)
-  console.log(data)
-
 </script>
 
-
-
 <template>
-    <ArticleTemplate v-for="article in articles" :key="article.id"
-    :title="article.attributes.Title"
-    :description="article.attributes.Description"
-    :cover="'http://localhost:1337' + article.attributes.Cover.data?.attributes.url"
-    :readingTime="article.attributes.ReadingTime"
-    :publishingDate="article.attributes.PublishingDate"
-    :keyPoints="article.attributes.KeyPoints"
-    :body="article.attributes.Body"
-    :sources="article.attributes.Sources"
-    :members="article.attributes.members.data"
-    />
+  <ArticleTemplate
+    v-for="article in articles"
+    :key="article.id"
+    :title="article.attributes.Title || 'No Title Available'"
+    :description="article.attributes.Description || 'Description not provided.'"
+    :cover="article.attributes.Cover.data?.attributes.url ? `http://localhost:1337${article.attributes.Cover.data.attributes.url}` : 'http://localhost:1337/uploads/default_cover_6d698f3d11.jpg'"
+    :readingTime="article.attributes.ReadingTime || 'N/A'"
+    :publishingDate="article.attributes.PublishingDate || 'Unknown'"
+    :keyPoints="article.attributes.KeyPoints || null "
+    :videoUrl="article.attributes.Video_url || ''"
+    :body="article.attributes.Body || []"
+    :sources="article.attributes.Sources || null"
+    :members="article.attributes.members.data || []"
+    :category="article.attributes.categories.data | 'Unknown'"
+  />
 
-        <!-- Related articles -->
+  <!-- Related articles -->
   <section class="bg-white dark:bg-gray-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6">
       <div class="flex items-end mb-10 justify-between">
@@ -103,14 +110,16 @@ import ArticleTemplate from '../components/ArticleTemplate.vue';
         </a>
       </div>
       <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-        <ArticleCard v-for="article in randomArticles" :key="article.id"
-              :title="article.attributes.Title"
-              :description="article.attributes.Description"
-              :cover="'http://localhost:1337' + article.attributes.Cover.data?.attributes.url"
-              :members="article.attributes.members.data"
+        <ArticleCard
+          v-for="article in randomArticles"
+          :key="article.id"
+          :title="article.attributes.Title"
+          :description="article.attributes.Description"
+          :cover="article.attributes.Cover.data?.attributes.url ? `http://localhost:1337${article.attributes.Cover.data.attributes.url}` : 'http://localhost:1337/uploads/default_cover_6d698f3d11.jpg'"
+          :members="article.attributes.members.data"
         />
       </div>
     </div>
   </section>
-    <!-- Related articles -->
+  <!-- Related articles -->
 </template>

@@ -4,4 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-aos', '@nuxt/content'],
   css: ['~/assets/css/main.css'],
+  plugins: [
+    '~/plugins/clipboard.js'
+  ],
+
 })
