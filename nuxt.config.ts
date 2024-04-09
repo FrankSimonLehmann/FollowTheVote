@@ -7,5 +7,4 @@ export default defineNuxtConfig({
   plugins: [
     '~/plugins/clipboard.js'
   ],
-
 })

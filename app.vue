@@ -38,7 +38,3 @@
   <NuxtPage />
   <Footer />
 </template>
-
-<style>
-
-</style>
