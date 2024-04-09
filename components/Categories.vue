@@ -11,7 +11,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col max-w-lg mx-auto text-gray-900  dark:text-white text-left">
+  <div class="flex flex-col max-w-lg mx-auto text-gray-900  dark:text-white text-left py-6 lg:py-16">
     <h3 class="text-2xl font-semibold text-left">{{ title }}</h3>
     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 text-balance text-left my-4">{{ description }}</p>
     <a href="#" class="btn-soft">All articles ({{ numberOfArticles }})

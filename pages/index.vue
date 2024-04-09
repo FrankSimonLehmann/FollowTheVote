@@ -1,3 +1,76 @@
+<script lang="ts" setup>
+import { onMounted, ref, computed } from 'vue';
+
+const QUERY = `query {
+  members {
+    data {
+      attributes {
+        First_name
+        Last_name
+        Description
+        LinkedIn_url
+        Portrait {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+        projects {
+          data {
+            attributes{
+              Logo {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+`;
+
+const data = ref({}); // Make 'data' a reactive reference
+
+async function fetchData() {
+  const response = await fetch('http://localhost:1337/graphql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer d3b730221110fa33635326a0c7b3436ef63754f4356db9517c8fdbdf58632505910d2103802dcdb810813b26b444f29df73ecd986ffc89f469aba099bed1bb7903d4efacb321922fd22e5b4ce33de3819a4c544499c2e7824e01fb551a3d9ea0d44181c0602ec215f262b221b22bbdf7286d79e0e403626e0abd36ef58e9ff4f` // Use your actual token
+    },
+    body: JSON.stringify({
+      query: QUERY,
+      variables: {}
+    })
+  });
+
+  data.value = await response.json();
+}
+
+onMounted(() => {
+  fetchData();
+});
+
+const members = computed(() => data.value.data?.members?.data || []);
+
+const randomMembers = computed(() => {
+  const shuffled = members.value
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
+  return shuffled.slice(0, 3);
+});
+
+</script>
+
+
 <template>
     <!-- Start block -->
     <section class= "bg-primary">
@@ -175,9 +248,16 @@
             </a>
         </div>
         <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-          <Member/>
-          <Member/>
-          <Member/>
+          <div v-for="member in randomMembers" :key="member.id">
+            <Member
+              :first_name="member.attributes.First_name"
+              :last_name="member.attributes.Last_name"
+              :description="member.attributes.Description"
+              :profileImage="'http://localhost:1337' + member.attributes.Portrait.data.attributes.url"
+              :linkedIn="member.attributes.LinkedIn_url"
+              :projects="member.attributes.projects.data.map(project => 'http://localhost:1337' + project.attributes.Logo.data.attributes.url)"
+            />
+          </div>
         </div>
       </div>
     </section>

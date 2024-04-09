@@ -91,26 +91,29 @@ const categories = computed(() => data.value.data?.categories?.data || []);
   </section>
 
   <section class="bg-white dark:bg-gray-900">
-    <div class="max-w-screen-xl px-4 mx-auto lg:px-6">
-      <div v-for="category in categories" :key="category.id">
-        <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-8">
-          <div class="col-span-3 space-y-10 border-t border-gray-200 dark:border-gray-700 "></div>
-          <Categories
-            :title="category.attributes.Title"
-            :description="category.attributes.Description"
-            :numberOfArticles="category.attributes.articles.data.length"
+  <div class="max-w-screen-xl px-4 mx-auto lg:px-6">
+    <div v-for="category in categories" :key="category.id">
+      <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-8 lg:pb-6">
+        <!-- Add margin-top here, adjust mt-8 to the desired value -->
+
+        <Categories
+          :title="category.attributes.Title"
+          :description="category.attributes.Description"
+          :numberOfArticles="category.attributes.articles.data.length"
+        />
+        <div v-for="article in category.attributes.articles.data.slice(0, 2)" :key="article.id">
+          <ArticleCard
+            :title="article.attributes.Title"
+            :description="article.attributes.Description"
+            :cover="'http://localhost:1337' + article.attributes.Cover.data.attributes.url"
+            :members="article.attributes.members.data"
           />
-          <div v-for="article in category.attributes.articles.data.slice(0, 2)" :key="article.id">
-            <ArticleCard
-              :title="article.attributes.Title"
-              :description="article.attributes.Description"
-              :cover="'http://localhost:1337' + article.attributes.Cover.data.attributes.url"
-              :members="article.attributes.members.data"
-            />
-          </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
+
+
   </body>
 </template>

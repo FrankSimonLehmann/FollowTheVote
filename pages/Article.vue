@@ -81,6 +81,7 @@ import ArticleTemplate from '../components/ArticleTemplate.vue';
   });
 
   const articles = computed(() => data.value.data?.articles?.data || []);
+  console.log(articles.attributes?.categories.data)
 </script>
 
 <template>
@@ -97,7 +98,7 @@ import ArticleTemplate from '../components/ArticleTemplate.vue';
     :body="article.attributes.Body || []"
     :sources="article.attributes.Sources || null"
     :members="article.attributes.members.data || []"
-    :category="article.attributes.categories.data | 'Unknown'"
+    :categories="article.attributes.categories.data "
   />
 
   <!-- Related articles -->
