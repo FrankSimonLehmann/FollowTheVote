@@ -46,7 +46,7 @@
             </li>
             <li>
               <nuxt-link
-                to="projects"
+                to="/projects"
                 class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
                 :class="{ 'text-white': isActive('/projects') }"
                 >Projects</nuxt-link
@@ -54,7 +54,7 @@
             </li>
             <li>
               <nuxt-link
-                to="team"
+                to="/team"
                 class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
                 :class="{ 'text-white': isActive('/team') }"
                 >People</nuxt-link
@@ -62,7 +62,7 @@
             </li>
             <li>
               <nuxt-link
-                to="publications"
+                to="/publications"
                 class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
                 :class="{ 'text-white': isActive('/publications') }"
                 >Publicatons</nuxt-link
@@ -70,7 +70,7 @@
             </li>
             <li>
               <nuxt-link
-                to="contact"
+                to="/contact"
                 class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
                 :class="{ 'text-white': isActive('/contact') }"
                 >Contact</nuxt-link

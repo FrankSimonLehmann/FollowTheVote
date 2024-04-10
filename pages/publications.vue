@@ -2,8 +2,9 @@
 import { onMounted, ref, computed } from 'vue'
 
 const QUERY = `query {
-  categories {
+  categories(pagination:{page:1,pageSize:60}) {
     data {
+      id
       attributes {
         Title
         Description
@@ -16,6 +17,7 @@ const QUERY = `query {
         }
         articles {
           data {
+            id
             attributes {
               Title
               Description
@@ -51,9 +53,10 @@ const QUERY = `query {
 `
 
 const data = ref({}) // Make 'data' a reactive reference
+const config = useAppConfig()
 
 async function fetchData() {
-  const response = await fetch('http://localhost:1337/graphql', {
+  const response = await fetch(`${config.strapiBaseUrl}/graphql`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -66,6 +69,7 @@ async function fetchData() {
   })
 
   data.value = await response.json()
+
 }
 
 onMounted(() => {
@@ -110,12 +114,14 @@ const categories = computed(() => data.value.data?.categories?.data || [])
               :title="category.attributes.Title"
               :description="category.attributes.Description"
               :numberOfArticles="category.attributes.articles.data.length"
+              :categoryId="category.id"
             />
             <div v-for="article in category.attributes.articles.data.slice(0, 2)" :key="article.id">
               <ArticleCard
+                :articleId="article.id"
                 :title="article.attributes.Title"
                 :description="article.attributes.Description"
-                :cover="'http://localhost:1337' + article.attributes.Cover.data.attributes.url"
+                :cover="config.strapiBaseUrl + article.attributes.Cover.data.attributes.url"
                 :members="article.attributes.members.data"
               />
             </div>

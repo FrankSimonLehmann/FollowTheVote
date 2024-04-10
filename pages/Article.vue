@@ -59,9 +59,10 @@ const randomArticles = computed(() => {
 })
 
 const data = ref({}) // Make 'data' a reactive reference
+const config = useAppConfig()
 
 async function fetchData() {
-  const response = await fetch('http://localhost:1337/graphql', {
+  const response = await fetch(`${config.strapiBaseUrl}/graphql`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -75,6 +76,8 @@ async function fetchData() {
 
   data.value = await response.json()
 }
+
+
 
 onMounted(() => {
   fetchData()
@@ -92,8 +95,8 @@ console.log(articles.attributes?.categories.data)
     :description="article.attributes.Description || 'Description not provided.'"
     :cover="
       article.attributes.Cover.data?.attributes.url
-        ? `http://localhost:1337${article.attributes.Cover.data.attributes.url}`
-        : 'http://localhost:1337/uploads/default_cover_6d698f3d11.jpg'
+        ? `${config.strapiBaseUrl}${article.attributes.Cover.data.attributes.url}`
+        : `${config.strapiBaseUrl}/uploads/default_cover_6d698f3d11.jpg`
     "
     :readingTime="article.attributes.ReadingTime || 'N/A'"
     :publishingDate="article.attributes.PublishingDate || 'Unknown'"
@@ -129,8 +132,8 @@ console.log(articles.attributes?.categories.data)
           :description="article.attributes.Description"
           :cover="
             article.attributes.Cover.data?.attributes.url
-              ? `http://localhost:1337${article.attributes.Cover.data.attributes.url}`
-              : 'http://localhost:1337/uploads/default_cover_6d698f3d11.jpg'
+              ? `${config.strapiBaseUrl}${article.attributes.Cover.data.attributes.url}`
+              : `${config.strapiBaseUrl}/uploads/default_cover_6d698f3d11.jpg`
           "
           :members="article.attributes.members.data"
         />

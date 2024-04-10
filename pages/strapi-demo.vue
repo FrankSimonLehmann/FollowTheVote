@@ -31,7 +31,7 @@ const QUERY = `query {
 const data = ref({}); // Make 'data' a reactive reference
 
 async function fetchData() {
-  const response = await fetch('http://localhost:1337/graphql', {
+  const response = await fetch(`${config.strapiBaseUrl}/graphql`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

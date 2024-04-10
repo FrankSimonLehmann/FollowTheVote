@@ -36,9 +36,10 @@ const QUERY = `query {
 `
 
 const data = ref({}) // Make 'data' a reactive reference
+const config = useAppConfig()
 
 async function fetchData() {
-  const response = await fetch('http://localhost:1337/graphql', {
+  const response = await fetch(`${config.strapiBaseUrl}/graphql`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -359,11 +360,11 @@ const randomMembers = computed(() => {
             :first_name="member.attributes.First_name"
             :last_name="member.attributes.Last_name"
             :description="member.attributes.Description"
-            :profileImage="'http://localhost:1337' + member.attributes.Portrait.data.attributes.url"
+            :profileImage="config.strapiBaseUrl + member.attributes.Portrait.data.attributes.url"
             :linkedIn="member.attributes.LinkedIn_url"
             :projects="
               member.attributes.projects.data.map(
-                (project) => 'http://localhost:1337' + project.attributes.Logo.data.attributes.url
+                (project) => config.strapiBaseUrl + project.attributes.Logo.data.attributes.url
               )
             "
           />
