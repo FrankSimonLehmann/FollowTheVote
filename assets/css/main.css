@@ -24,6 +24,9 @@
   .text-color-highlight {
    @apply text-purple-500
   }
+  .border-color-primary {
+    @apply border-gray-700
+  }
 }
 
 h1 {
@@ -51,7 +54,7 @@ p {
 }
 
 .btn-light {
-  @apply  text-white border px-5 py-3 rounded-lg text-sm border-gray-700 hover:bg-gray-600;
+  @apply  text-white border px-5 py-3 rounded-lg text-sm border-color-primary hover:bg-gray-600;
 }
 
 .btn-page {

@@ -18,7 +18,6 @@ const props = defineProps<{
     <h2 v-if="props.value.level === 2" >{{ props.value.children[0].text }}</h2>
     <h3 v-if="props.value.level === 3" >{{ props.value.children[0].text }}</h3>
     <h4 v-if="props.value.level === 4" >{{ props.value.children[0].text }}</h4>
-    <!-- Add more heading levels as needed -->
   </div>
 
 </template>

@@ -2,15 +2,15 @@
   <footer class="bg-white dark:bg-gray-800">
     <div class="mx-auto max-w-screen-xl p-4 py-6 md:p-8 lg:p-10 lg:py-16">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5"></div>
-      <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
+      <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-color-primary" />
       <div class="text-center">
-        <!-- <a href="#" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
+        <!-- <a href="#" class="flex items-center justify-center mb-5 text-2xl font-semibold  text-color-primary">
                     <img src=/FTV.png" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
                     FollowTheVote
                 </a> -->
         <nuxt-link to="/" class="mb-4 flex items-center justify-center">
           <img src="/FTV.png" class="mr-3 h-6 sm:h-9" alt="FollowTheVote Logo" />
-          <span class="flex text-2xl font-semibold text-gray-900 dark:text-white">FollowTheVote</span>
+          <span class="flex text-2xl font-semibold  text-color-primary">FollowTheVote</span>
         </nuxt-link>
         <div class="my-3 flex items-center justify-center gap-2">
           <nuxt-link
@@ -25,12 +25,12 @@
             >Imprint</nuxt-link
           >
         </div>
-        <span class="block text-center text-sm text-gray-500 dark:text-gray-400"
+        <span class="block text-center text-sm text-gray-500  text-color-tertiary"
           >© 2024 FollowTheVote. All Rights Reserved.
         </span>
         <ul class="mt-5 flex justify-center space-x-5">
           <li>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <a href="#" class="text-gray-500 hover:  text-color-tertiary dark:hover:text-white">
               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill-rule="evenodd"
@@ -41,7 +41,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <a href="#" class="text-gray-500 hover:  text-color-tertiary dark:hover:text-white">
               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill-rule="evenodd"
@@ -52,7 +52,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <a href="#" class="text-gray-500 hover:  text-color-tertiary dark:hover:text-white">
               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
@@ -61,7 +61,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <a href="#" class="text-gray-500 hover:  text-color-tertiary dark:hover:text-white">
               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill-rule="evenodd"
@@ -72,7 +72,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+            <a href="#" class="text-gray-500 hover:  text-color-tertiary dark:hover:text-white">
               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill-rule="evenodd"

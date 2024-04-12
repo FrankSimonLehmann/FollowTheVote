@@ -73,7 +73,7 @@ function showToast(message) {
   <section class="bg-secondary">
     <div class="mx-auto max-w-screen-xl space-y-12 px-4 py-8 lg:space-y-20 lg:px-6 lg:py-24">
       <div class="gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-        <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+        <div class="text-gray-500 sm:text-lg  text-color-tertiary">
           <h2 class="my-8">Do you want to become active ?</h2>
           <p class="mb-4 max-w-2xl">
             Instead of listening to politicians' promises, FollowTheVote keeps you up to date with what they're actually
@@ -83,7 +83,7 @@ function showToast(message) {
           </p>
 
           <!-- List -->
-          <ul role="list" class="my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700">
+          <ul role="list" class="my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-color-primary">
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
@@ -127,7 +127,7 @@ function showToast(message) {
   <section class="bg-primary">
     <div class="mx-auto max-w-screen-xl space-y-12 px-4 py-8 lg:space-y-20 lg:px-6 lg:py-24">
       <div class="gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-        <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+        <div class="text-gray-500 sm:text-lg  text-color-tertiary">
           <h2 class="my-8">Question about the NGO ?</h2>
           <p class="mb-4 max-w-2xl">
             Instead of listening to politicians' promises, FollowTheVote keeps you up to date with what they're actually
@@ -139,7 +139,7 @@ function showToast(message) {
           <!-- List -->
 
           <!-- List -->
-          <ul role="list" class="my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700">
+          <ul role="list" class="my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-color-primary">
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg

@@ -4,7 +4,7 @@
       <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4">
         <nuxt-link to="/" class="flex items-center">
           <img src="/FTV.png" class="mr-3 h-6 sm:h-9" alt="FollowTheVote Logo" />
-          <span class="hidden self-center whitespace-nowrap text-xl font-semibold md:inline-block dark:text-white"
+          <span class="hidden self-center whitespace-nowrap text-xl font-semibold md:inline-block text-color-primary"
             >FollowTheVote</span
           >
         </nuxt-link>
@@ -13,7 +13,7 @@
           <button
             data-collapse-toggle="mobile-menu-2"
             type="button"
-            class="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden  text-color-tertiary dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="mobile-menu-2"
             aria-expanded="false"
           >
@@ -65,7 +65,7 @@
                 to="/publications"
                 class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
                 :class="{ 'text-white': isActive('/publications') }"
-                >Publicatons</nuxt-link
+                >Publications</nuxt-link
               >
             </li>
             <li>

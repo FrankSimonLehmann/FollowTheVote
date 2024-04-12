@@ -118,7 +118,7 @@ console.log(articles.attributes?.categories.data)
   <section class="bg-white dark:bg-gray-900">
     <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6">
       <div class="mb-10 flex items-end justify-between">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Related articles</h2>
+        <h2 class="text-3xl font-bold  text-color-primary">Related articles</h2>
         <a href="#" class="btn-soft">
           All articles
           <svg class="ml-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

@@ -103,31 +103,31 @@ const categories = computed(() => data.value.data?.categories?.data || [])
         </div>
       </div>
     </section>
-
     <section class="bg-white dark:bg-gray-900">
-      <div class="mx-auto max-w-screen-xl px-4 lg:px-6">
-        <div v-for="category in categories" :key="category.id">
-          <div class="space-y-8 sm:gap-6 lg:grid lg:grid-cols-3 lg:space-y-8 lg:pb-6 xl:gap-10">
-            <!-- Add margin-top here, adjust mt-8 to the desired value -->
-
-            <Categories
-              :title="category.attributes.Title"
-              :description="category.attributes.Description"
-              :numberOfArticles="category.attributes.articles.data.length"
-              :categoryId="category.id"
-            />
-            <div v-for="article in category.attributes.articles.data.slice(0, 2)" :key="article.id">
-              <ArticleCard
-                :articleId="article.id"
-                :title="article.attributes.Title"
-                :description="article.attributes.Description"
-                :cover="config.strapiBaseUrl + article.attributes.Cover.data.attributes.url"
-                :members="article.attributes.members.data"
-              />
-            </div>
-          </div>
+  <div class="mx-auto max-w-screen-xl px-4 lg:px-6">
+    <div v-for="category in categories" :key="category.id">
+      <!-- Add a condition to check the length of the articles -->
+      <div v-if="category.attributes.articles.data.length > 0" class="space-y-8 sm:gap-6 lg:grid lg:grid-cols-3 lg:space-y-8 lg:pb-6 xl:gap-10">
+        <Categories
+          :title="category.attributes.Title"
+          :description="category.attributes.Description"
+          :numberOfArticles="category.attributes.articles.data.length"
+          :categoryId="category.id"
+        />
+        <!-- Slice to show up to the first 2 articles only -->
+        <div v-for="article in category.attributes.articles.data.slice(0, 2)" :key="article.id">
+          <ArticleCard
+            :articleId="article.id"
+            :title="article.attributes.Title"
+            :description="article.attributes.Description"
+            :cover="config.strapiBaseUrl + article.attributes.Cover.data.attributes.url"
+            :members="article.attributes.members.data"
+          />
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   </body>
 </template>

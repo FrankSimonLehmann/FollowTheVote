@@ -78,11 +78,9 @@ const randomMembers = computed(() => {
         <h1 class="mb-4 max-w-2xl">We bring politics<br />to the 21st century.</h1>
         <p class="mb-4 max-w-2xl">
           Instead of listening to politicians' promises, FollowTheVote keeps you up to date with what they're actually
-          doing in Parliament. Through <a href="#" class="hover:underline">Mobile apps</a>
-          <a href="#" class="hover:underline">Social Media</a> and <a href="#" class="hover:underline">Podcast</a>, we
-          keep you up to date.
+          doing in Parliament. Through Mobile apps Social Media and Podcast, we keep you up to date.
         </p>
-        <a href="#" class="btn bg-slate-300">See projects</a>
+        <a href="#" class="btn">See projects</a>
       </div>
       <div class="py-5 lg:col-span-5 lg:mt-0 lg:flex">
         <img src="/General.png" alt="hero image" />
@@ -95,7 +93,7 @@ const randomMembers = computed(() => {
     <div class="mx-auto max-w-screen-xl space-y-12 px-4 py-8 lg:space-y-20 lg:px-6 lg:py-24">
       <!-- Row -->
       <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-        <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+        <div>
           <h2 class="mb-8">Our democracy is in danger</h2>
           <p class="mb-8">
             We are deeply concerned about the state of our democracy, as evidenced by the alarming statistics revealing
@@ -103,7 +101,7 @@ const randomMembers = computed(() => {
             promote critical thinking, and foster informed civic engagement.
           </p>
           <!-- List -->
-          <ul role="list" class="space-y-5 border-t border-gray-700 pt-8" data-aos="fade-up">
+          <ul role="list" class="space-y-5 border-t border-color-primary pt-8">
             <li class="flex items-center space-x-4">
               <!-- Icon -->
               <span class="btn-light">30%</span>
@@ -144,7 +142,7 @@ const randomMembers = computed(() => {
           src="/Solution.png"
           alt="feature image 2"
         />
-        <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+        <div class="text-gray-500 sm:text-lg  text-color-tertiary">
           <h2 class="mb-8">That is why we build digital solutions.</h2>
           <p class="mb-8">
             In response, we are committed to leveraging technology and media platforms responsibly. Through our
@@ -153,7 +151,7 @@ const randomMembers = computed(() => {
             democracy that are essential for a thriving society.
           </p>
           <!-- List -->
-          <ul role="list" class="my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700">
+          <ul role="list" class="my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-color-primary">
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <img src="/FTV.png" alt="" class="logo" />
@@ -216,7 +214,7 @@ const randomMembers = computed(() => {
           reach across borders. We believe in the power of action to make a lasting difference, embodying our ethos of
           turning intentions into impactful results.
         </p>
-        <div class="mt-6 space-y-4 border-t border-gray-200 pt-6 dark:border-gray-700">
+        <div class="mt-6 space-y-4 border-t border-gray-200 pt-6 dark:border-color-primary">
           <div>
             <a href="#" class="btn-page">
               Explore projects
@@ -323,7 +321,7 @@ const randomMembers = computed(() => {
           />
         </svg>
         <blockquote>
-          <p class="text-xl font-medium text-gray-900 md:text-2xl dark:text-white">
+          <p class="text-xl font-medium  md:text-2xl text-color-primary">
             "Sponsors play a pivotal role in our success! Their support provides the necessary resources and funding
             vital for the implementation of our projects and initiatives. Beyond financial contributions, sponsors also
             offer invaluable expertise, networks, and mentorship, enriching our endeavors with diverse perspectives and
