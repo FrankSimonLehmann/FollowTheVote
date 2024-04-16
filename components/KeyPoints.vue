@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import { defineProps } from 'vue';
+import { defineProps } from 'vue'
 
 interface TextNode {
-  type: 'text';
-  text: string;
+  type: 'text'
+  text: string
 }
 
 interface ListItemNode {
-  type: 'list-item';
-  children: TextNode[];
+  type: 'list-item'
+  children: TextNode[]
 }
 
 interface ListNode {
-  type: 'list';
-  format: 'unordered';
-  children: ListItemNode[];
+  type: 'list'
+  format: 'unordered'
+  children: ListItemNode[]
 }
 
 // Since your data is an array of ListNode
@@ -23,17 +23,16 @@ const props = defineProps<{
 }>()
 </script>
 
-
 <template>
-  <section class="bg-gray-50 bg-secondary">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto text-balance lg:px-6">
-      <div class="max-w-screen-md mx-auto">
-        <h2 class="mb-4 text-3xl font-bold  text-color-primary">Key points</h2>
-        <ul class="list-disc   text-color-tertiary">
+  <section class="bg-secondary">
+    <div class="mx-auto max-w-screen-xl text-balance px-4 py-8 lg:px-6">
+      <div class="mx-auto max-w-screen-md">
+        <h2 class="text-color-primary mb-4 text-3xl font-bold">Key points</h2>
+        <ul class="text-color-tertiary list-disc">
           <div v-if="props.value">
             <!-- Iterate over the array of lists -->
             <template v-for="(list, listIndex) in props.value" :key="`list-${listIndex}`">
-              <ul v-if="list.type === 'list' && list.format === 'unordered'" class="list-disc   text-color-tertiary">
+              <ul v-if="list.type === 'list' && list.format === 'unordered'" class="text-color-tertiary list-disc">
                 <!-- Iterate over the list items within each list -->
                 <li v-for="(item, itemIndex) in list.children" :key="`item-${itemIndex}`" class="mb-2">
                   <!-- Finally, render the text content of each list item -->
