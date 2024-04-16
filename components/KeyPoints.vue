@@ -25,15 +25,15 @@ const props = defineProps<{
 
 
 <template>
-  <section class="bg-gray-50 dark:bg-gray-800">
+  <section class="bg-gray-50 bg-secondary">
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-balance lg:px-6">
       <div class="max-w-screen-md mx-auto">
         <h2 class="mb-4 text-3xl font-bold  text-color-primary">Key points</h2>
-        <ul class="list-disc text-gray-500  text-color-tertiary">
+        <ul class="list-disc   text-color-tertiary">
           <div v-if="props.value">
             <!-- Iterate over the array of lists -->
             <template v-for="(list, listIndex) in props.value" :key="`list-${listIndex}`">
-              <ul v-if="list.type === 'list' && list.format === 'unordered'" class="list-disc text-gray-500  text-color-tertiary">
+              <ul v-if="list.type === 'list' && list.format === 'unordered'" class="list-disc   text-color-tertiary">
                 <!-- Iterate over the list items within each list -->
                 <li v-for="(item, itemIndex) in list.children" :key="`item-${itemIndex}`" class="mb-2">
                   <!-- Finally, render the text content of each list item -->

@@ -63,9 +63,9 @@ const members = computed(() => data.value.data?.members?.data || [])
 
 <template>
   <body>
-    <section class="bg-white dark:bg-gray-900">
+    <section class=" bg-primary">
       <div
-        class="mx-auto grid max-w-screen-xl bg-gray-900 px-4 pb-8 pt-8 lg:grid-cols-12 lg:gap-8 lg:py-16 lg:pt-8 xl:gap-0"
+        class="mx-auto grid max-w-screen-xl bg-primary px-4 pb-8 pt-8 lg:grid-cols-12 lg:gap-8 lg:py-16 lg:pt-8 xl:gap-0"
       >
         <div class="relative h-[calc(100vh/2)] rounded-lg bg-[url('/team.jpg')] bg-cover bg-center lg:col-span-12">
           <div class="absolute inset-0 flex items-center justify-start rounded-lg bg-black bg-opacity-50">
@@ -76,19 +76,17 @@ const members = computed(() => data.value.data?.members?.data || [])
                 Young, political and digital Europeans.
               </h1>
               <p class="z-10 mb-6 max-w-2xl font-light text-gray-300 md:text-lg lg:mb-8 lg:text-xl">
-                Our articles are written by our team of experts and cover a wide range of topics, from the latest
-                political news to the most pressing issues of our time. We also publish articles from guest writers who
-                are experts in their field.
+                Our projects would not be possible without our volunteers; they are the driving force behind every initiative. With a team constantly evolving, we foster a vibrant environment brimming with young talent. Ready to join us in making a difference?
               </p>
               <div class="space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
-                <a href="#" class="btn">Join the team</a>
+                <nuxt-link to="contact" class="btn"> Join the team </nuxt-link>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="bg-white dark:bg-gray-900">
+    <section class=" bg-primary">
       <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-10">
         <div class="space-y-8 sm:gap-6 lg:grid lg:grid-cols-3 lg:space-y-0 xl:gap-10">
           <div v-for="member in members" :key="member.id">

@@ -26,7 +26,7 @@ const props = defineProps<{
 
 <template>
         <!-- Only render if props.value is truthy and has the correct type and format -->
-        <ul v-if="props.value && props.value.type === 'list' && props.value.format === 'unordered'" class="list-disc text-gray-500  text-color-tertiary">
+        <ul v-if="props.value && props.value.type === 'list' && props.value.format === 'unordered'" class="list-disc   text-color-tertiary">
           <!-- Iterate over the list items -->
           <li v-for="(item, itemIndex) in props.value.children" :key="`item-${itemIndex}`" class="mb-2">
             <!-- Render the text content of each list item -->

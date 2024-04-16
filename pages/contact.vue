@@ -51,7 +51,7 @@ function showToast(message) {
 <template>
   <!-- Start block -->
   <!-- Hero -->
-  <section class="bg-gray-900">
+  <section class="bg-primary">
     <div class="mx-auto grid max-w-screen-xl px-4 pb-8 pt-8 lg:grid-cols-12 lg:gap-8 lg:py-16 lg:pt-8 xl:gap-0">
       <div class="relative h-[calc(100vh/1.8)] rounded-xl bg-[url('/contact.jpg')] bg-cover bg-center lg:col-span-12">
         <div class="absolute inset-0 flex items-center justify-start rounded-lg bg-black bg-opacity-50">
@@ -73,7 +73,7 @@ function showToast(message) {
   <section class="bg-secondary">
     <div class="mx-auto max-w-screen-xl space-y-12 px-4 py-8 lg:space-y-20 lg:px-6 lg:py-24">
       <div class="gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-        <div class="text-gray-500 sm:text-lg  text-color-tertiary">
+        <div class=" sm:text-lg  text-color-tertiary">
           <h2 class="my-8">Do you want to become active ?</h2>
           <p class="mb-4 max-w-2xl">
             Instead of listening to politicians' promises, FollowTheVote keeps you up to date with what they're actually
@@ -127,7 +127,7 @@ function showToast(message) {
   <section class="bg-primary">
     <div class="mx-auto max-w-screen-xl space-y-12 px-4 py-8 lg:space-y-20 lg:px-6 lg:py-24">
       <div class="gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-        <div class="text-gray-500 sm:text-lg  text-color-tertiary">
+        <div class=" sm:text-lg  text-color-tertiary">
           <h2 class="my-8">Question about the NGO ?</h2>
           <p class="mb-4 max-w-2xl">
             Instead of listening to politicians' promises, FollowTheVote keeps you up to date with what they're actually

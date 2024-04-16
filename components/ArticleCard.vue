@@ -23,7 +23,7 @@ const navigateToArticle = () => {
 <template>
   <div
     @click="navigateToArticle"
-    class="mx-auto flex h-full min-w-96 max-w-lg cursor-pointer flex-col rounded-lg border border-gray-100 bg-white p-6 text-left  shadow xl:p-8 dark:border-gray-600 dark:bg-gray-800 text-color-primary"
+    class="mx-auto flex h-full min-w-96 max-w-lg cursor-pointer flex-col rounded-lg border border-gray-100  p-6 text-left  shadow xl:p-8 dark:border-gray-600 bg-secondary text-color-primary"
   >
     <img :src="cover" alt="Article Cover" class="h-60 rounded-lg object-cover" />
     <h3 class="mb-2 mt-4 text-2xl font-semibold">{{ title.length > 50 ? title.slice(0, 50) + '...' : title }}</h3>

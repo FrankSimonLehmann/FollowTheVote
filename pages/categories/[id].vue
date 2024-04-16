@@ -88,7 +88,7 @@ console.log(category.attributes?.Cover.data.attributes.url)
 
 <template>
   <body>
-  <section class="bg-gray-900">
+  <section class="bg-primary">
   <div class="mx-auto grid max-w-screen-xl px-4 pb-8 pt-8 lg:grid-cols-12 lg:gap-8 lg:py-16 lg:pt-8 xl:gap-0">
     <div
       class="relative h-[calc(100vh/1.8)] rounded-xl bg-cover bg-center lg:col-span-12"
@@ -107,7 +107,7 @@ console.log(category.attributes?.Cover.data.attributes.url)
   </div>
 </section>
 
-    <section class="bg-white dark:bg-gray-900">
+    <section class=" bg-primary">
       <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6">
         <h3 class="mb-8 text-left text-2xl font-semibold">All articles</h3>
         <div

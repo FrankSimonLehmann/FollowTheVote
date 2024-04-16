@@ -17,14 +17,14 @@ const props = defineProps({
 </script>
 
 <template>
-      <section class="bg-white dark:bg-gray-900">
+      <section class=" bg-primary">
       <div class="max-w-screen-md px-4 py-8 mx-auto lg:px-6">
         <div class="max-w-screen-md mx-auto mb-8 lg:mb-12">
           <div class="flex items-center mb-7">
             <img :src="logo" alt="Project Logo" class="w-12 h-12 rounded-lg">
             <h1 class="max-w-2xl ml-2 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-color-primary" >{{ name || 'Default Title' }}</h1>
           </div>
-          <p class="mb-5 font-light text-gray-500 sm:text-xl  text-color-tertiary">{{ description || 'Default Description' }}</p>
+          <p class="mb-5 font-light  sm:text-xl  text-color-tertiary">{{ description || 'Default Description' }}</p>
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4" >
             <div class="mt-4 flex items-center" v-for="member in members" :key="member.id">
               <img :src="'http://localhost:1337' + member.attributes.Portrait.data.attributes.url" :alt="`${member.attributes.First_name} ${member.attributes.Last_name}`" class="object-cover rounded-full w-10 h-10">

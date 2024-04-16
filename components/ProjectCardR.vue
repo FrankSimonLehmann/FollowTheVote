@@ -23,7 +23,7 @@ const navigateToArticle = () => {
 </script>
 
 <template>
-  <section class="bg-gray-900">
+  <section class="bg-primary">
     <div class="mx-auto max-w-screen-xl space-y-12 px-4 py-8 lg:space-y-20 lg:px-6">
       <div class="items-top gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
         <img
@@ -31,12 +31,11 @@ const navigateToArticle = () => {
           alt="Project Cover"
           class="mb-4 hidden h-full w-full rounded-lg object-cover lg:mb-0 lg:flex"
         />
-        <div class="text-gray-500 sm:text-lg  text-color-tertiary">
+        <div class=" sm:text-lg  text-color-tertiary">
           <div class="mb-7 flex items-center">
             <img :src="logo" alt="Project Logo" class="h-12 w-12" />
             <h2 class="mx-4 text-3xl font-extrabold tracking-tight  text-color-primary">{{ name }}</h2>
           </div>
-          <a :href="websiteLink" class="btn">see project</a>
           <p class="my-8 font-light lg:text-xl">{{ description }}</p>
           <!-- Dynamically include additional social media links -->
           <ul role="list" class="space-y-5">

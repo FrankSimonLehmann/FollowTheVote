@@ -26,14 +26,14 @@ import { format, parseISO } from 'date-fns';
 <template>
   <!-- Intro block -->
 
-  <section class="bg-white dark:bg-gray-900">
+  <section class=" bg-primary">
     <div class="max-w-screen-md px-4 py-8 mx-auto lg:px-6">
       <div class="max-w-screen-md mx-auto mb-8 lg:mb-12">
         <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-color-primary">
           {{ title || 'Default Title' }}
         </h1>
         <!-- Only display the description if it exists -->
-        <p v-if="description" class="mb-5 font-light text-gray-500 sm:text-xl  text-color-tertiary">
+        <p v-if="description" class="mb-5 font-light  sm:text-xl  text-color-tertiary">
           {{ description }}
         </p>
         <!-- Unified grid for all details -->
@@ -75,7 +75,7 @@ import { format, parseISO } from 'date-fns';
 
   <!-- Article content -->
 
-  <section class="bg-white dark:bg-gray-900">
+  <section class=" bg-primary">
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6">
       <div class="max-w-screen-md mx-auto">
         <div v-for="section in body" :key="section.id">
@@ -83,7 +83,7 @@ import { format, parseISO } from 'date-fns';
           <Paragraph
             v-if="section.type === 'paragraph'"
             :value="section"
-            class="mb-6 text-gray-500  text-color-tertiary"
+            class="mb-6   text-color-tertiary"
           />
 
           <!-- Render Header component -->

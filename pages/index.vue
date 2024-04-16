@@ -80,10 +80,10 @@ const randomMembers = computed(() => {
           Instead of listening to politicians' promises, FollowTheVote keeps you up to date with what they're actually
           doing in Parliament. Through Mobile apps Social Media and Podcast, we keep you up to date.
         </p>
-        <a href="#" class="btn">See projects</a>
+        <nuxt-link to="projects" class="btn">See projects </nuxt-link>
       </div>
       <div class="py-5 lg:col-span-5 lg:mt-0 lg:flex">
-        <img src="/General.png" alt="hero image" />
+        <img src="/Mockups PIA transparant.png" alt="hero image" />
       </div>
     </div>
   </section>
@@ -104,21 +104,21 @@ const randomMembers = computed(() => {
           <ul role="list" class="space-y-5 border-t border-color-primary pt-8">
             <li class="flex items-center space-x-4">
               <!-- Icon -->
-              <span class="btn-light">30%</span>
+              <span class="text-gray-900 border px-5 py-3 rounded-lg text-sm border-color-primary bg-slate-100">30%</span>
               <span class="text-base font-medium leading-tight text-white">
                 of people in the German electorate have populist views and are interested in conspiracy theories.</span
               >
             </li>
             <li class="flex items-center space-x-4">
               <!-- Icon -->
-              <span class="btn-light">67%</span>
+              <span class="text-gray-900 border px-5 py-3 rounded-lg text-sm border-color-primary bg-slate-100">67%</span>
               <span class="text-base font-medium leading-tight text-white">
                 of Europeans encountered fake news at least once a week.</span
               >
             </li>
             <li class="flex items-center space-x-4">
               <!-- Icon -->
-              <span class="btn-light">89%</span>
+              <span class="text-gray-900 border px-5 py-3 rounded-lg text-sm border-color-primary bg-slate-100">89%</span>
               <span class="text-base font-medium leading-tight text-white">
                 of German citizens of generations Y and Z spend every day on social media and are exposed to unreliable
                 and often extreme political information.</span
@@ -139,10 +139,10 @@ const randomMembers = computed(() => {
       <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
         <img
           class="mb-4 hidden h-full w-full rounded-lg object-cover lg:mb-0 lg:flex"
-          src="/Solution.png"
+          src="/Mockups PIA.jpg"
           alt="feature image 2"
         />
-        <div class="text-gray-500 sm:text-lg  text-color-tertiary">
+        <div class=" sm:text-lg  text-color-tertiary">
           <h2 class="mb-8">That is why we build digital solutions.</h2>
           <p class="mb-8">
             In response, we are committed to leveraging technology and media platforms responsibly. Through our
@@ -155,36 +155,36 @@ const randomMembers = computed(() => {
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <img src="/FTV.png" alt="" class="logo" />
-              <a href="#" class="btn-light">Bundestagswahl 2021</a>
+              <nuxt-link to="projects" class="btn-light">Bundestagswahl 2021 </nuxt-link>
             </li>
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <img src="/Bundestagreels.png" alt="" class="logo" />
-              <a href="#" class="btn-light">BundestagReels</a>
+              <nuxt-link to="projects" class="btn-light">BundestagReels </nuxt-link>
             </li>
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <img src="/Plusme.png" alt="" class="logo" />
-              <a href="#" class="btn-light">+Me</a>
+              <nuxt-link to="projects" class="btn-light">+Me </nuxt-link>
             </li>
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <img src="/DigitalPolitics.png" alt="" class="logo" />
-              <a href="#" class="btn-light">Digital politics</a>
+              <nuxt-link to="projects" class="btn-light">+Digital Politics </nuxt-link>
             </li>
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <img src="/YoungActivists.png" alt="" class="logo" />
-              <a href="#" class="btn-light">Young activists</a>
+              <nuxt-link to="projects" class="btn-light">+Young activists </nuxt-link>
             </li>
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <img src="/SpillTheThesis.png" alt="" class="logo" />
-              <a href="#" class="btn-light">SpillTheThesis</a>
+              <nuxt-link to="projects" class="btn-light">SpillTheThesis </nuxt-link>
             </li>
           </ul>
           <div>
-            <a href="#" class="btn-page">
+            <nuxt-link to="projects" class="btn-page">
               All projects
               <svg class="ml-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -193,7 +193,7 @@ const randomMembers = computed(() => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -216,7 +216,7 @@ const randomMembers = computed(() => {
         </p>
         <div class="mt-6 space-y-4 border-t border-gray-200 pt-6 dark:border-color-primary">
           <div>
-            <a href="#" class="btn-page">
+            <nuxt-link to="projects" class="btn-page">
               Explore projects
               <svg class="ml-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -225,10 +225,10 @@ const randomMembers = computed(() => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+              </nuxt-link>
           </div>
           <div>
-            <a href="#" class="btn-page mb-8">
+            <nuxt-link to="team" class="btn-page mb-8">
               Meet the team
               <svg class="ml-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -237,7 +237,7 @@ const randomMembers = computed(() => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -350,7 +350,9 @@ const randomMembers = computed(() => {
           With a team constantly evolving, we foster a vibrant environment brimming with young talent. Ready to join us
           in making a difference?
         </p>
-        <a href="#" class="btn m-4"> Meet the team </a>
+        <nuxt-link to="team" class="btn m-4">
+          Meet the team
+        </nuxt-link>
       </div>
       <div class="space-y-8 sm:gap-6 lg:grid lg:grid-cols-3 lg:space-y-0 xl:gap-10">
         <div v-for="member in randomMembers" :key="member.id">
@@ -374,14 +376,6 @@ const randomMembers = computed(() => {
   <!-- Video section start -->
   <section class="bg-primary">
     <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-24">
-      <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
-        <h2 class="mb-4">Together with a group of young volunteers</h2>
-        <p class="mb-4">
-          Our projects would not be possible without our volunteers; they are the driving force behind every initiative.
-          With a team constantly evolving, we foster a vibrant environment brimming with young talent. Ready to join us
-          in making a difference?
-        </p>
-      </div>
       <video class="h-full w-full rounded-lg object-cover" controls>
         <source src="https://www.youtube.com/watch?v=-IWTaXiXwKc" type="mp4" />
         Your browser does not support the video tag.

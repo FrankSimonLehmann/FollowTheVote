@@ -115,7 +115,7 @@ console.log(articles.attributes?.categories.data)
   />
 
   <!-- Related articles -->
-  <section class="bg-white dark:bg-gray-900">
+  <section class=" bg-primary">
     <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6">
       <div class="mb-10 flex items-end justify-between">
         <h2 class="text-3xl font-bold  text-color-primary">Related articles</h2>

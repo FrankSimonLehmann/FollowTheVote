@@ -27,6 +27,7 @@
   .border-color-primary {
     @apply border-gray-700
   }
+
 }
 
 h1 {

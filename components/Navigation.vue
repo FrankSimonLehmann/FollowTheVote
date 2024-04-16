@@ -13,7 +13,7 @@
           <button
             data-collapse-toggle="mobile-menu-2"
             type="button"
-            class="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden  text-color-tertiary dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="ml-1 inline-flex items-center rounded-lg p-2 text-sm  focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden  text-color-tertiary hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="mobile-menu-2"
             aria-expanded="false"
           >
@@ -39,7 +39,7 @@
             <li>
               <nuxt-link
                 to="/"
-                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
+                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-color-primary"
                 :class="{ 'text-white': isActive('/') }"
                 >Home</nuxt-link
               >
@@ -47,7 +47,7 @@
             <li>
               <nuxt-link
                 to="/projects"
-                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
+                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-color-primary"
                 :class="{ 'text-white': isActive('/projects') }"
                 >Projects</nuxt-link
               >
@@ -55,7 +55,7 @@
             <li>
               <nuxt-link
                 to="/team"
-                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
+                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-color-primary"
                 :class="{ 'text-white': isActive('/team') }"
                 >People</nuxt-link
               >
@@ -63,7 +63,7 @@
             <li>
               <nuxt-link
                 to="/publications"
-                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
+                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-color-primary"
                 :class="{ 'text-white': isActive('/publications') }"
                 >Publications</nuxt-link
               >
@@ -71,7 +71,7 @@
             <li>
               <nuxt-link
                 to="/contact"
-                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
+                class="block py-2 pl-3 pr-4 text-gray-400 hover:bg-gray-50 lg:p-0 lg:hover:bg-transparent lg:hover:text-color-primary"
                 :class="{ 'text-white': isActive('/contact') }"
                 >Contact</nuxt-link
               >

@@ -81,9 +81,9 @@ const categories = computed(() => data.value.data?.categories?.data || [])
 
 <template>
   <body>
-    <section class="bg-white dark:bg-gray-900">
+    <section class=" bg-primary">
       <div
-        class="mx-auto grid max-w-screen-xl bg-gray-900 px-4 pb-8 pt-8 lg:grid-cols-12 lg:gap-8 lg:py-16 lg:pt-8 xl:gap-0"
+        class="mx-auto grid max-w-screen-xl bg-primary px-4 pb-8 pt-8 lg:grid-cols-12 lg:gap-8 lg:py-16 lg:pt-8 xl:gap-0"
       >
         <div class="relative h-[calc(100vh/2)] rounded-lg bg-[url('/writing.jpg')] bg-cover bg-center lg:col-span-12">
           <div class="absolute inset-0 flex items-center justify-start bg-black bg-opacity-50">
@@ -103,7 +103,7 @@ const categories = computed(() => data.value.data?.categories?.data || [])
         </div>
       </div>
     </section>
-    <section class="bg-white dark:bg-gray-900">
+    <section class=" bg-primary">
   <div class="mx-auto max-w-screen-xl px-4 lg:px-6">
     <div v-for="category in categories" :key="category.id">
       <!-- Add a condition to check the length of the articles -->
